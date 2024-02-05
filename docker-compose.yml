@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  emi:
+    build: .
+    image: renamebotbasic:${TAG}
+    container_name: renamebotbasicstatic:${TAG}
+    network_mode: host
+    pull_policy: never
+
+networks:
+  default: 
+    external: true
+    name: host
